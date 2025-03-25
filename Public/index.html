@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftVerse</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .navbar, footer {
+      background: linear-gradient(90deg, hsl(349, 44%, 67%), #ffb6c1);
+    }
+    .navbar-brand, .nav-link, footer h5, footer a, footer p {
+      color: white !important;
+    }
+    .btn-primary {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .btn-primary:hover {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .carousel-caption {
+      background: rgba(192, 134, 142, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .smooth-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .smooth-transition:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SwiftVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link smooth-transition" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link smooth-transition" href="biography.html">Biography</a></li>
+          <li class="nav-item"><a class="nav-link smooth-transition" href="merch.html">Merch and Style</a></li>
+          <li class="nav-item"><a class="nav-link smooth-transition" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('highlight'));
+        this.classList.add('highlight');
+      });
+    });
+  </script>
+
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="taylor.jpg" class="d-block w-100 smooth-transition" alt="Slide 1">
+        <div class="carousel-caption">
+          <h3>Your Ultimate Taylor Swift Hub</h3>
+          <p>Swiftie Central - Dive into the World of Taylor Swift</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="taylor1.jpg" class="d-block w-100 smooth-transition" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="taylor2.jpg" class="d-block w-100 smooth-transition" alt="Slide 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2>About Us</h2>
+        <h5>Celebrating Taylor Swift</h5>
+        <p>Welcome to SwiftVerse, your one-stop destination for everything Taylor Swift. From her iconic albums to her latest updates, we bring you closer to the magic of her music and journey.</p>
+        <button class="btn btn-primary">Learn More</button>
+      </div>
+      <div class="col-md-6 text-end"></div>
+        <img src="about us.png" class="img-fluid rounded shadow smooth-transition" alt="About Us" style="width: 75%; max-width: 100px;">
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h3>Explore Taylor's World</h3>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card smooth-transition">
+          <img src="albums.webp" class="card-img-top" alt="Taylor's Albums" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Albums</h5>
+            <p class="card-text" style="display: none;">Dive into Taylor's discography and explore her iconic albums.</p>
+            <button class="btn btn-primary toggle-content">Discover More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card smooth-transition">
+          <img src="concerts.jpg" class="card-img-top" alt="Taylor's Concerts" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Concerts</h5>
+            <p class="card-text" style="display: none;">Relive the magic of Taylor's unforgettable live performances.</p>
+            <button class="btn btn-primary toggle-content">Learn More</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card smooth-transition">
+          <img src="news.jpg" class="card-img-top" alt="Taylor News" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">News & Updates</h5>
+            <p class="card-text" style="display: none;">Stay updated with the latest news and announcements from Taylor.</p>
+            <button class="btn btn-primary toggle-content">Read More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.toggle-content').forEach(button => {
+      button.addEventListener('click', function() {
+        const cardText = this.previousElementSibling;
+        if (cardText.style.display === 'none') {
+          cardText.style.display = 'block';
+          this.textContent = 'Show Less';
+        } else {
+          cardText.style.display = 'none';
+          this.textContent = 'Discover More';
+        }
+      });
+    });
+  </script>
+
+  <footer class="py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>About Us</h5>
+          <p>Dive into Taylor's world. Her music, style, and legacy all in one place. From album deep-dives to the latest updates, we celebrate every era of her journey.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center">
+          <h5>Follow Us</h5>
+          <a href="#" class="me-2">Facebook</a>
+          <a href="#" class="me-2">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center">&copy; 2024 SwiftVerse. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

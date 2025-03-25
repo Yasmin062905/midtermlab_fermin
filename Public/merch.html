@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftVerse</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .navbar, footer {
+      background: linear-gradient(90deg, hsl(349, 44%, 67%), #ffb6c1);
+    }
+    .navbar-brand, .nav-link, footer h5, footer a, footer p {
+      color: white !important;
+    }
+    .btn-primary {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .btn-primary:hover {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .carousel-caption {
+      background: rgba(192, 134, 142, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .smooth-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .smooth-transition:hover {
+      transform: scale(1.05);
+    }
+    .highlight {
+      color: hsl(349, 50%, 60%); /* Slightly different shade */
+      font-weight: bold;
+    }
+    h2 {
+      margin-top: -20px; /* Adjusts the heading slightly upward */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SwiftVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link click-effect" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link click-effect" href="biography.html">Biography</a></li>
+          <li class="nav-item"><a class="nav-link click-effect" href="merch.html">Merch and style</a></li>
+          <li class="nav-item"><a class="nav-link click-effect" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('highlight'));
+        this.classList.add('highlight');
+      });
+    });
+  </script>
+
+<div class="container mt-5">
+  <h3 class="text-center" style="font-size: 2rem; color: hsl(349, 50%, 60%);">Merch and Style</h3>
+  <div class="row">
+    <!-- Merch Item 1 -->
+    <div class="col-md-4 d-flex align-items-stretch">
+      <div class="card w-100 border border-pink">
+        <img src="hoodie.webp" class="card-img-top img-fluid" alt="Taylor Swift Merch 1" style="height: 300px; object-fit: cover;">
+        <img src="hoodie2.webp" class="card-img-top img-fluid" alt="Taylor Swift Merch 1" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 1.5rem; color: hsl(349, 50%, 60%);">Taylor Swift Hoodie</h5>
+          <p class="card-text">Cozy and stylish hoodie featuring Taylor Swift's album art.</p>
+          <a href="#" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+    </div>
+    <!-- Merch Item 2 -->
+    <div class="col-md-4 d-flex align-items-stretch">
+      <div class="card w-100">
+        <img src="t-shirt.webp" class="card-img-top img-fluid" alt="Taylor Swift Merch 2" style="height: 300px; object-fit: cover;">
+        <img src="TS eras tour.webp" class="card-img-top img-fluid" alt="Taylor Swift Merch 2" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 1.5rem; color: hsl(349, 50%, 60%);">Taylor Swift T-Shirt</h5>
+          <p class="card-text">Classic T-shirt with Taylor Swift's iconic logo.</p>
+          <a href="#" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+    </div>
+    <!-- Fashion Style -->
+    <div class="col-md-4 d-flex align-items-stretch">
+      <div class="card w-100">
+        <img src="fashion_style.webp" class="card-img-top img-fluid" alt="Taylor Swift Fashion Style" style="height: 300px; object-fit: cover;">
+        <img src="fashion.webp" class="card-img-top img-fluid" alt="Taylor Swift Fashion Style" style="height: 300px; object-fit: cover;">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: 1.5rem; color: hsl(349, 50%, 60%);">Taylor's Signature Look</h5>
+          <p class="card-text">Get inspired by Taylor Swift's chic and elegant fashion style.</p>
+          <a href="#" class="btn btn-primary">Explore More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>About Merch and Style</h5>
+        <p>Explore Taylor Swift's exclusive merchandise and signature fashion style. From cozy hoodies to chic outfits, find your perfect look inspired by Taylor's iconic eras.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <h5>Stay Connected</h5>
+        <p>Follow us for the latest updates on new merch drops and style inspirations.</p>
+        <a href="#" class="me-2">Facebook</a>
+        <a href="#" class="me-2">Twitter</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">&copy; 2024 SwiftVerse. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

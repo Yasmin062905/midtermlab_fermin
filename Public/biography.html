@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftVerse</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .navbar, footer {
+      background: linear-gradient(90deg, hsl(349, 44%, 67%), #ffb6c1);
+    }
+    .navbar-brand, .nav-link, footer h5, footer a, footer p {
+      color: white !important;
+    }
+    .btn-primary {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .btn-primary:hover {
+      background-color: hsl(349, 44%, 67%);
+      border-color: #ffb6c1;
+    }
+    .carousel-caption {
+      background: rgba(192, 134, 142, 0.5);
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .smooth-transition {
+      transition: all 0.3s ease-in-out;
+    }
+    .smooth-transition:hover {
+      transform: scale(1.05);
+    }
+    .highlight {
+      color: hsl(349, 50%, 60%); /* Slightly different shade */
+      font-weight: bold;
+    }
+    h2 {
+      margin-top: -20px; /* Adjusts the heading slightly upward */
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">SwiftVerse</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="biography.html">Biography</a></li>
+          <li class="nav-item"><a class="nav-link" href="merch.html">Merch and style</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('highlight'));
+        this.classList.add('highlight');
+      });
+    });
+  </script>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Biography</h2>
+        <h5 class="highlight">Who is Taylor Swift?</h5>
+        <p>
+          Meet <span class="highlight">Taylor Alison Swift</span>, a storyteller at heart and a global sensation. Born on <span class="highlight">December 13, 1989</span>, her journey from a small-town girl in Pennsylvania to a worldwide icon is nothing short of inspiring.
+        </p>
+        <h5 class="highlight">Why We Love Her</h5>
+        <p>
+          Taylor's music isn't just songs—it's <span class="highlight">stories</span> that connect us all. From the heartfelt "Love Story" to the introspective "All Too Well," her lyrics feel like they were written just for you.
+        </p>
+        <h5 class="highlight">Beyond the Music</h5>
+        <p>
+          She's not just a musician—Taylor is a <span class="highlight">philanthropist</span>, an advocate, and a role model. Her ability to evolve while staying true to herself is what makes her truly timeless.
+        </p>
+        <button class="btn btn-primary smooth-transition">Discover More</button>
+      </div>
+      <div class="col-md-6 text-end">
+        <img src="bio2.jpg" class="img-fluid rounded shadow smooth-transition mt-3" alt="Taylor Swift 2" style="width: 75%; max-width: 300px; height: auto;">
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>About Taylor</h5>
+          <p>Explore Taylor's journey, her music, and the impact she's made on millions. Stay inspired by her story.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <h5>Stay Connected</h5>
+          <a href="#" class="me-2">Facebook</a>
+          <a href="#" class="me-2">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center">&copy; 2024 SwiftVerse. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
